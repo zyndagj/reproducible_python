@@ -43,13 +43,42 @@ The ``extra_requires`` is not a required field, but the next two sections in thi
 Installing your package
 -----------------------
 
-At this point, you should be able to install your package with ``pip``. Installing with
+At this point, you should be able to install your package with ``pip``. Installing summarize with
 
 .. code-block::
 
    $ pip install --user
 
+installs it as a static package to your local site-packages.
+You can also enable active development by installing it with
 
+.. code-block::
+
+   $ pip install -e . --user
+   $ pip list | grep summarize
+summarize                     0.0.1               /Users/gzynda/Documents/reproducible_python/docs/assets
+
+If the installation location is already on your path, you'll be able to run the ``summarize`` CLI script created by ``setup.py``.
+
+.. code-block::
+
+   $ summarize -h
+   usage: summarize [-h] [-N INT]
+
+   A simple tool for computing the mean of a random list
+
+   optional arguments:
+     -h, --help  show this help message and exit
+     -N INT      Number of random integers [5]
+
+If this does not work, you'll have to add the install location to your path
+
+.. code-block::
+
+   # Linux + macOS
+   export PATH=~/.local/bin:${PATH}
+   # Windows
+   # ???
 
 Current structure
 -----------------

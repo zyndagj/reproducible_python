@@ -17,10 +17,11 @@ After completing this module, participants should be able to:
 Why is this important?
 ----------------------
 
-Python if often thought as a scripting language, and used in a similar manner to bash.
+Python is often thought as a scripting language, and used in a similar manner to bash.
 While this is true, many python scripts require third-party packages, and there is often no way to know if the script actually functions as expected on your system.
 
-If you plan on sharing your script with others, we recommend transforming it into
+If you plan on sharing your script with others, we recommend transforming it into a proper package with specified dependencies and validation tests.
+This precaution will improve reproducibility and help you avoid the "works on my system" issues you encounter while supporting your community.
 
 Requirements
 ------------
