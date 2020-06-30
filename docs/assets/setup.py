@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='summarize',           # package name
-    version=0.0.1,              # package version
+    version='0.0.1',            # package version
     description='A simple tool for computing the mean of a random list', # short description
     url='GitHub repo URL',      # URL for the project (optional)
     packages=["summarize"],     # Package directory
