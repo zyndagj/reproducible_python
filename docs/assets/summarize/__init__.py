@@ -16,7 +16,7 @@ def main():
     print(mean)
     # Done!
 
-def gen_numbers(n_numbers=5):
+def gen_numbers(n_numbers):
     '''
     Generates n_numbers integers ranging from 0 to 99
     '''

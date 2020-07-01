@@ -19,7 +19,7 @@ Tutorial on creating a reproducible python package.
    05-pytest
    06-tox
    07-documentation
-   08-extras
+   08-conclusions-extras
 
 .. toctree::
    :maxdepth: 1
