@@ -1,6 +1,8 @@
 Introduction
 ============
 
+This tutorial will teach you how to create a reproducible `python package <https://packaging.python.org/tutorials/packaging-projects/>`_ for anyone to install.
+
 Module Learning Objectives
 --------------------------
 
@@ -10,8 +12,8 @@ After completing this module, participants should be able to:
 
 * Create a python package hosted on GitHub
 * Specify package dependencies
-* Understand the importance of random seeds and deterministic testing
 * Create tests to validate package
+* Understand the importance of random seeds and deterministic testing
 * Install package with pip from GitHub
 
 Why is this important?

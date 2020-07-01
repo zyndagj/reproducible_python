@@ -2,7 +2,10 @@ Creating the package repository
 ===============================
 
 The python package we create in this tutorial will be hosted from GitHub.
-While your source code will be public, you should always expect the source code of your python packages and scripts to be visible.
+
+   *We won't be targeting pypi with this tutorial because it is a proper archive, where projects are not meant to be deleted*
+
+While this means your source code will be public, you should always expect the source code of your python packages and scripts to be visible since it is only compiled at runtime.
 
 Create the repository
 ---------------------

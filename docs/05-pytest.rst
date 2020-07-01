@@ -20,7 +20,8 @@ Make sure everything is in order by running
    $ python -m pytest tests/
 
 to install pytest and make sure it works on our simple test.
-If summarize is installed, you can also run
+
+If summarize is installed, you can also just run
 
 .. code-block::
 
@@ -33,12 +34,23 @@ Your first test
    :pyobject: test_true
    :linenos:
 
-While not very useful for your package, this is a simple tests whether ``True`` is equal to ``True`` with the standard `assert <https://docs.pytest.org/en/latest/assert.html>`_ statement, and will always succeed.
+While not very useful for your package, this is a simple test to ensure ``True`` is equal to ``True`` with the standard `assert <https://docs.pytest.org/en/latest/assert.html>`_ statement, and *should* always succeed.
+
+If you have any errors running ``pytest`` at this point, something is wrong with your configuration.
 
 Testing the size of the array
 -----------------------------
 
 The next test will ensure that when the ``summarize.gen_numbers`` function is given a 5, it returns an array with 5 values.
+Running the code manually would look something like
+
+.. code-block:: python
+
+   >>> import summarize
+   >>> summarize.gen_numbers(5)
+   array([20, 19, 38, 79, 50])
+
+The test should then assert that the returned array has a length of 5.
 
 .. literalinclude:: assets/tests/test_summarize.py
    :pyobject: test_gen_numbers_5
@@ -50,6 +62,8 @@ Running a test across multiple values
 -------------------------------------
 
 For times like this where you want to run a test across multiple values, you can import pytest and utilize the `pytest.mark.parametrize <https://docs.pytest.org/en/stable/parametrize.html>`_ to sweep across a list of values.
+
+   *Note: The decorator function is spelled parametrize, not parameterize. Your brain may unconsciously auto-correct that.*
 
 .. literalinclude:: assets/tests/test_summarize.py
    :language: python
@@ -137,7 +151,7 @@ and just **feel good**.
 
 This may seem like plenty of tests for just a few simple functions, but you want at least one test per function, and this is a minimum.
 Ideally, you would want multiple tests per function to handle all kinds of edge cases.
-For instance, even after our testing ``summary.summary`` still has the opportunity to fail and throw an error when given ``-N`` is less than 1.
+For instance, even after writing all of these tests, ``summary.summary`` still has the opportunity to fail and throw an error when given ``-N`` is less than 1.
 An error like this may be confusing to the user, and a human readable error statement should be returned before exiting.
 A test can even be written to test for the exit code.
 

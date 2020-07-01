@@ -18,6 +18,8 @@ Installing
 ----------
 
 Pip can install from `more places <https://pip.pypa.io/en/stable/reference/pip_install/#examples>`_ than just pypi and a local directory.
+If you ``git add``, ``git commit``, and ``git push`` all the files we created, you'll be able to install summarize without a separate checkout command.
+
 These directions show how users can install your package directly from your GitHub URL.
 
 .. literalinclude:: assets/README.md

@@ -33,8 +33,8 @@ While the `__init__.py <https://docs.python.org/3/tutorial/modules.html#packages
 
 In your preferred text editor, create a file called ``__init__.py`` that contains the following sections:
 
-Header
-++++++
+The header section
+++++++++++++++++++
 
 .. literalinclude:: assets/summarize/__init__.py
    :language: python
@@ -42,7 +42,19 @@ Header
    :lines: 1-4
 
 Line 1 tells your shell how to run this file when executed, and lines 3 and 4 import the packages necessary to run this python program.
-While `argparse <https://docs.python.org/3/library/argparse.html>`_ is build in to all python distributions, `Numpy <https://numpy.org/>`_ is an external dependency that must be installed to run.
+While `argparse <https://docs.python.org/3/library/argparse.html>`_ is built in to all python distributions, `Numpy <https://numpy.org/>`_ is an external dependency that must be installed to be imported and run.
+
+To test whether you have numpy already installed on your system, you can use ``pip list`` to list out all installed packages.
+
+.. code-block::
+
+   $ pip list | grep numpy
+
+If you don't see a line for numpy, please install it using your preferred method.
+
+.. code-block::
+
+   $ pip install --user numpy
 
 The ``main()`` function
 +++++++++++++++++++
@@ -51,15 +63,18 @@ The ``main()`` function
    :pyobject: main
    :linenos:
 
-Transforming your python script into a tool usable on the CLI can be done in as few as 3 lines.
-The first instruction (line 3) constructs the parser object and also describes the the tool itself.
+Transforming your python script into a tool usable on the CLI through `argparse <https://docs.python.org/3/library/argparse.html>`_ can be done in as few as 3 lines.
+The first instruction (line 3) constructs the `ArgumentParser <https://docs.python.org/3/library/argparse.html#argumentparser-objects>`_ object and also describes the the tool itself.
 Line 4 adds the first and only argument, which restricts values to integers and includes a description which states the default of 5 numbers.
-Line 5 parses the input and generates the ``args`` object. The value passed in through the ``-N`` parameter can be accessed through ``args.N``.
+Line 5 parses the input and generates the ``args`` object.
+The value passed in through the ``-N`` parameter can then be `accessed <https://docs.python.org/3/library/argparse.html#name-or-flags>`_ through ``args.N``.
 
-After setting up the CLI arguments, the random numbers are generated in line 7 and the mean is calculated in line 9. Finally, the mean is printed before exiting.
+After setting up the CLI arguments, the random numbers are generated in line 7 and the mean is calculated in line 9. Finally, the calculated mean is printed before exiting.
 
 The ``gen_numbers()`` function
 ++++++++++++++++++++++++++++++
+
+After the ``main()`` function, add the ``gen_numbers()`` function to generate a variable length array of random integers.
 
 .. literalinclude:: assets/summarize/__init__.py
    :pyobject: gen_numbers
@@ -67,6 +82,9 @@ The ``gen_numbers()`` function
 
 The ``summarize()`` function
 ++++++++++++++++++++++++++++
+
+Even though it may seem redundant, create a ``summarize()`` function to compute the mean of the input array.
+Creating a specialized function for this will help with testing later.
 
 .. literalinclude:: assets/summarize/__init__.py
    :pyobject: summarize
@@ -80,7 +98,8 @@ Epilogue
    :linenos:
    :lines: 31-32
 
-These two lines tell python what to run when the script is invoked. In our case, the ``main()`` function is run.
+These two lines tell python what to run when the script is invoked.
+In our case, the ``main()`` function is run.
 This section should always exist at the end of a file so all functions and global-scoped variables have already been initialized before running anything.
 
 Current structure

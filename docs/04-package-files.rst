@@ -1,8 +1,10 @@
 Creating the package files
 ==========================
 
-At this point the package directory is completed, but all the metadata that describes the package is still missing.
-Meaning you can
+At this point, the package directory is complete.
+However, the metadata that describes the package is still missing.
+
+This means you can
 
 .. code-block::
 
@@ -12,7 +14,7 @@ Meaning you can
    35.0
 
 but ``pip install .`` will not work yet.
-To enable this, the `setup.py <https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py>`_ file needs to be created to describe the package metadata.
+To enable this, the `setup.py <https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py>`_ file needs to be created to describe the package and any requirements.
 
 The ``setup.py`` file
 ---------------------
@@ -24,7 +26,15 @@ Open your favorite text editor and create your ``setup.py`` containing the follo
    :linenos:
    :emphasize-lines: 9
 
-While the ``url`` field is optional for publishing, fill it Be sure to fill in the URL to your GitHub repository for the package on line 9. There are many other optional fields to describe the package, which you can see `here <https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args>`_. Feel free to add any additional fields.
+While the ``url`` field on line 9 is optional for publishing, fill in the URL to your GitHub repository to get used to providing this information.
+If you eventually publish a package on pypi, this is how the project links are populated.
+
+.. image:: ./images/pypi.png
+   :target: ./images/pypi.png
+   :alt: PYPI links
+
+There are many other optional fields to describe the package, which you can see `here <https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args>`_.
+Feel free to take some time to add any additional fields.
 
 One of the main reasons to transition from a simple script to a full package is to not only support an intuitive installation process, but to also specify fine-grained dependencies.
 
@@ -47,16 +57,18 @@ At this point, you should be able to install your package with ``pip``. Installi
 
 .. code-block::
 
-   $ pip install --user
+   $ pip install --user .
+   $ pip list | grep summarize
 
-installs it as a static package to your local site-packages.
+installs it, where ``.`` targets the package in your current working directory (cwd), as a static package to your local site-packages.
 You can also enable active development by installing it with
 
 .. code-block::
 
-   $ pip install -e . --user
+   $ pip uninstall -y summarize
+   $ pip install --user -e .
    $ pip list | grep summarize
-summarize                     0.0.1               /Users/gzynda/Documents/reproducible_python/docs/assets
+   summarize                     0.0.1               /Users/gzynda/Documents/reproducible_python/docs/assets
 
 If the installation location is already on your path, you'll be able to run the ``summarize`` CLI script created by ``setup.py``.
 
@@ -78,7 +90,7 @@ If this does not work, you'll have to add the install location to your path
    # Linux + macOS
    export PATH=~/.local/bin:${PATH}
    # Windows
-   # ???
+   # ????
 
 Current structure
 -----------------
@@ -91,7 +103,8 @@ Current structure
    └── summarize
        └── __init__.py
 
-You may see additional files if you did run ``__init__.py`` or ``import summarize`` previously.
+
+*Note: You may see additional files in this tree if you did run ``__init__.py`` or ``import summarize``.*
 
 Additional Information
 ----------------------
