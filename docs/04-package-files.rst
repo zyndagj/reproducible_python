@@ -6,7 +6,7 @@ However, the metadata that describes the package is still missing.
 
 This means you can
 
-.. code-block::
+::
 
    $ python
    >>> import summarize
@@ -55,7 +55,7 @@ Installing your package
 
 At this point, you should be able to install your package with ``pip``. Installing summarize with
 
-.. code-block::
+::
 
    $ pip install --user .
    $ pip list | grep summarize
@@ -63,7 +63,7 @@ At this point, you should be able to install your package with ``pip``. Installi
 installs it, where ``.`` targets the package in your current working directory (cwd), as a static package to your local site-packages.
 You can also enable active development by installing it with
 
-.. code-block::
+::
 
    $ pip uninstall -y summarize
    $ pip install --user -e .
@@ -72,7 +72,7 @@ You can also enable active development by installing it with
 
 If the installation location is already on your path, you'll be able to run the ``summarize`` CLI script created by ``setup.py``.
 
-.. code-block::
+::
 
    $ summarize -h
    usage: summarize [-h] [-N INT]
@@ -85,7 +85,7 @@ If the installation location is already on your path, you'll be able to run the 
 
 If this does not work, you'll have to add the install location to your path
 
-.. code-block::
+::
 
    # Linux + macOS
    export PATH=~/.local/bin:${PATH}
@@ -95,7 +95,7 @@ If this does not work, you'll have to add the install location to your path
 Current structure
 -----------------
 
-.. code-block::
+::
 
    $ tree
    .
@@ -104,7 +104,7 @@ Current structure
        └── __init__.py
 
 
-*Note: You may see additional files in this tree if you did run ``__init__.py`` or ``import summarize``.*
+Note: You may see additional files in this tree if you did run ``__init__.py`` or ``import summarize``.
 
 Additional Information
 ----------------------

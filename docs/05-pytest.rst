@@ -14,7 +14,7 @@ In your favorite editor, create the file ``tests/test_summarize.py`` and add the
 
 Make sure everything is in order by running
 
-.. code-block::
+::
 
    $ pip install --user pytest
    $ python -m pytest tests/
@@ -23,7 +23,7 @@ to install pytest and make sure it works on our simple test.
 
 If summarize is installed, you can also just run
 
-.. code-block::
+::
 
    $ pytest
 
@@ -136,7 +136,7 @@ Conclusions
 
 After writing all these tests, you should see something like
 
-.. code-block::
+::
 
    ===================================================== test session starts =====================================================
    platform darwin -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1

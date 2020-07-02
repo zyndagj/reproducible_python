@@ -10,7 +10,6 @@ Requirements
 ------------
 
 .. literalinclude:: assets/README.md
-   :language: markdown
    :linenos:
    :lines: 5-7
 
@@ -23,7 +22,6 @@ If you ``git add``, ``git commit``, and ``git push`` all the files we created, y
 These directions show how users can install your package directly from your GitHub URL.
 
 .. literalinclude:: assets/README.md
-   :language: markdown
    :linenos:
    :lines: 9-21
 
@@ -33,7 +31,6 @@ Testing
 It's always a good idea to demonstrate how to both setup the test environment and run tests
 
 .. literalinclude:: assets/README.md
-   :language: markdown
    :linenos:
    :lines: 23-38
 
@@ -43,6 +40,5 @@ Usage
 Lastly, include an explanation on usage along with expected output.
 
 .. literalinclude:: assets/README.md
-   :language: markdown
    :linenos:
    :lines: 40-55

@@ -107,7 +107,7 @@ Current structure
 
 At this point, you should have a directory called ``summarize`` containing the file ``__init__.py``.
 
-.. code-block::
+::
 
    $ cd ..
    $ tree summarize
@@ -118,7 +118,7 @@ At this point, you should have a directory called ``summarize`` containing the f
 
 Assuming you have numpy already installed, running ``__init__.py`` with the ``-h`` argument should present you with its help text.
 
-.. code-block::
+::
 
    $ python summarize/__init__.py -h
    usage: __init__.py [-h] [-N INT]
@@ -131,7 +131,7 @@ Assuming you have numpy already installed, running ``__init__.py`` with the ``-h
 
 Running it without an argument should also return a number.
 
-.. code-block::
+::
 
    $ python summarize/__init__.py
    52.2

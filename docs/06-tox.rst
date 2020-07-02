@@ -16,7 +16,7 @@ To test summarize with tox, you'll need to
 Installing tox
 --------------
 
-.. code-block::
+::
 
    $ pip install --user tox
 
@@ -45,7 +45,7 @@ Each of these test environments will also be isolated from your system, and fres
 This will help ensure that your package will work for others as dependencies are updated over time.
 
 The second section describes the test environment.
-The deps section lists out any dependencies required to build and test (not run) the package.
+The "deps" section lists out any dependencies required to build and test (not run) the package.
 In the case of summarize, pytest is the only external test dependency, and since tox creates a clean environment, pytest will not be available if not specified here.
 Lastly, you specify how the tests are run with the "commands" field.
 
@@ -54,9 +54,9 @@ Running tox
 
 Running tox is extremely simple
 
-.. code-block::
+::
 
    $ tox
 
-It will create a clean virtual environemnt for every python version you want to test again, install your package and all dependencies, and then run your test commands.
+It will create a clean virtual environment for every python version you want to test again, install your package and all dependencies, and then run your test commands.
 This is meant to make continuous integration and delivery easy and simple.
