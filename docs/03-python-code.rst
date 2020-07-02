@@ -19,7 +19,7 @@ Create the package directory
 
 The current directory is the repository, create another ``summarize`` directory to serve as the package.
 
-.. code-block::
+::
 
    $ mkdir summarize
    $ cd summarize
@@ -46,13 +46,13 @@ While `argparse <https://docs.python.org/3/library/argparse.html>`_ is built in 
 
 To test whether you have numpy already installed on your system, you can use ``pip list`` to list out all installed packages.
 
-.. code-block::
+::
 
    $ pip list | grep numpy
 
 If you don't see a line for numpy, please install it using your preferred method.
 
-.. code-block::
+::
 
    $ pip install --user numpy
 

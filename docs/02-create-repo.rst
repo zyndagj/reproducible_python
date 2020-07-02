@@ -34,7 +34,7 @@ Click the "clone" button to get the URL to clone your repository locally.
 The URL that was copied can then be used to "git clone".
 After cloning the repository, enter the directory.
 
-.. code-block::
+::
 
    $ git clone <paste>
-   $ cd [repo name]
+   $ cd summarize

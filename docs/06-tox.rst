@@ -11,7 +11,7 @@ To test summarize with tox, you'll need to
 
 * Install tox via pip
 * Create the ``pyproject.toml`` file
-* Create the ``tox.ini``file
+* Create the ``tox.ini`` file
 
 Installing tox
 --------------

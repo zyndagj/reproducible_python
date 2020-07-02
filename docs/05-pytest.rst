@@ -1,7 +1,7 @@
 Creating tests with pytest
 ==========================
 
-.. code-block::
+::
 
    $ mkdir tests
 
