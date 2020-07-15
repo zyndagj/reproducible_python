@@ -7,7 +7,7 @@ Quickstart
 
 1. Create a Python 3 environment
 2. Install dependencies ``pip install -r requirements.txt``
-3. Build using ``make html`` (Mac/Linux) or ``make.bat html`` (Windows)
+3. Build using ``make html`` (Mac/Linux) or ``make.bat html`` (Windows) from in the ``docs`` directory
 
 If you ``pip install sphinx-autobuild``, you can use ``make livehtml`` which
 will start a server that watches for source changes and will rebuild/refresh
